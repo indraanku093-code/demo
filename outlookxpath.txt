@@ -1,0 +1,56 @@
+Compose email:
+
+mail icon : @FindBy(xpath="//*[contains(text(),'?') and contains(@data-icon-name,'Mail')]")
+            WebElement mailicon;
+public void clickmailicon()
+{
+mailicon.click();
+thread.sleep(700);
+}
+
+New Message : @FindBy(xpath="//*[contains(text(),'New message')]")
+              WebElement newmsgBtn;
+public void clickNewMsgBtn()
+{
+newmsgBtn.click();
+thread.sleep(700);
+}
+
+To text box : @FindBy(xpath="//input[@aria-label='To']")
+              WebElement toTextBox;
+public void settorecpient(String recipient)
+{
+toTextBox.click();
+toTextBox.sendkeys(recipient+keys.Enter)
+thread.sleep(700);
+}
+
+Subject : @FindBy(xpath="//input[contains(@placeholder,'Add a subject')]")
+          WebElement subjectTextBox;
+
+public void settorecpient(String subjectmsg)
+{
+subjectTextBox.click();
+subjectTextBox.sendkeys(subjectmsg+keys.Enter)
+thread.sleep(700);
+
+}
+
+Message body : @FindBy(xpath="//*[contains(@aria-label,'Message body')]")
+          WebElement msgTextBox;
+
+public void settorecpient(String msg)
+{
+msgTextBox.click();
+msgTextBox.sendkeys(msg+keys.Enter)
+thread.sleep(700);
+
+}
+
+Send button : @FindBy(xpath="//*[contains(text(),'Send')]")
+          WebElement sendBtn;
+public void clickSendBtn()
+{
+sendBtn.click();
+thread.sleep(700);
+}
